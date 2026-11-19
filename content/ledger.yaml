@@ -1,0 +1,16 @@
+# Hand-written ledger entries. Reports, journal posts, ideas and thesis-tracker
+# updates are added to the ledger automatically — only record extra milestones here.
+# type: Milestone | Observation   (href is optional)
+- date: 2026-08-15
+  type: Milestone
+  title: Opened this journal
+  note: First commit. The rule for the ledger - entries are added, never rewritten.
+- date: 2026-09-01
+  type: Milestone
+  title: Settled on a standard research template
+  note: Every report now carries the same sections, from executive summary to risks and catalysts, so old work is easy to audit.
+  href: /research
+- date: 2026-10-12
+  type: Observation
+  title: Started writing the bear case before the bull case
+  note: A small change in order that noticeably changed the quality of the arguments.

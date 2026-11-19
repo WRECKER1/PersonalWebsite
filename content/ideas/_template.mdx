@@ -1,0 +1,49 @@
+---
+# Copy, rename, fill in. Files starting with "_" are ignored.
+company: Company Name
+ticker: TICKER
+sector: Sector
+category: Quality compounder     # any label; becomes a filter
+dateAdded: 2026-01-01
+status: Under Research           # Under Research | Active Thesis | Monitoring | Closed
+horizon: 3–5 years
+# research: report-file-name     # links to a report in content/research
+
+thesis: >-
+  The core thesis in two or three sentences.
+
+bull:
+  - First point
+bear:
+  - First point
+
+metrics:                         # first three show in the watchlist; enter real, sourced figures
+  - { label: ROCE, value: "—" }
+
+valuation: >-
+  What the price seems to assume.
+
+catalysts:
+  - What could make the market agree
+risks:
+  - What could go wrong
+invalidation:
+  - An observable condition that closes the thesis
+
+tracker:                         # add an entry whenever your view changes
+  - date: 2026-01-01
+    type: Thesis                 # Thesis | Development | Assumption change | Lesson | Closed
+    title: Opened the file
+    conviction: 3                # 1 (doubtful) – 5 (high)
+    note: Why this caught my attention.
+
+# When closing an idea, set status: Closed and add:
+# retrospective:
+#   closedOn: 2026-06-01
+#   verdict: One line.
+#   expected: What I thought would happen.
+#   actual: What happened.
+#   lesson: What I am keeping.
+---
+
+Optional working notes in Markdown.

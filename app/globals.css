@@ -1,0 +1,254 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ───────────────────────── Design tokens ─────────────────────────
+   Ivory paper, midnight ink, forest accent, burgundy for the
+   contrary view. Dark mode is the same notebook read at night. */
+:root {
+  --paper: #f5f0e6;
+  --paper-2: #ece5d6;
+  --ink: #131c2e;
+  --ink-2: #364058;
+  --muted: #636975;
+  --rule: #d3cbba;
+  --accent: #2c5a44;
+  --burgundy: #7b2d34;
+  --chart-1: #1f7f52;
+  --chart-2: #c07a1e;
+  --chart-3: #2f5ca8;
+  color-scheme: light;
+}
+.dark {
+  --paper: #0f1726;
+  --paper-2: #162033;
+  --ink: #ece5d6;
+  --ink-2: #c5bfb1;
+  --muted: #8d95a5;
+  --rule: #2b3650;
+  --accent: #7db497;
+  --burgundy: #d59090;
+  --chart-1: #35a06c;
+  --chart-2: #c4862f;
+  --chart-3: #5f86d8;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-paper-2: var(--paper-2);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-muted: var(--muted);
+  --color-rule: var(--rule);
+  --color-accent: var(--accent);
+  --color-burgundy: var(--burgundy);
+  --font-serif: "Newsreader Variable", "Iowan Old Style", Georgia, serif;
+  --font-sans: "Instrument Sans Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-hand: "Caveat Variable", "Bradley Hand", cursive;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  -webkit-text-size-adjust: 100%;
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-feature-settings: "kern", "liga";
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+::selection { background: var(--accent); color: var(--paper); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+@layer components {
+  .container-page {
+    width: 100%;
+    max-width: 82rem;
+    margin-inline: auto;
+    --gutter: 1.25rem;
+    padding-inline: var(--gutter);
+  }
+  @media (min-width: 768px) { .container-page { --gutter: 2.5rem; } }
+  /* A top rule on a .container-page that stops at the gutters */
+  .rule-top {
+    background: linear-gradient(var(--ink), var(--ink)) top center / calc(100% - 2 * var(--gutter)) 1px no-repeat;
+  }
+
+  /* Small mono label used for datelines, categories and data captions */
+  .kicker {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .rule-double { border-top: 3px double var(--ink); }
+
+  /* Underline that draws itself on hover */
+  .link-draw {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0% 1px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.35s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  .link-draw:hover, a:hover .link-draw, .group:hover .link-draw { background-size: 100% 1px; }
+
+  .num { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+
+  /* ───────── Long-form reading styles (MDX output) ───────── */
+  .prose-journal {
+    font-family: var(--font-serif);
+    font-size: 1.1875rem;
+    line-height: 1.7;
+    color: var(--ink);
+  }
+  .prose-journal > * + * { margin-top: 1.35em; }
+  .prose-journal h2 {
+    font-size: 1.85rem;
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+    font-weight: 500;
+    margin-top: 2.6em;
+    padding-top: 1.1em;
+    border-top: 1px solid var(--rule);
+  }
+  .prose-journal h3 {
+    font-family: var(--font-sans);
+    font-size: 0.8125rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 2.4em;
+  }
+  .prose-journal a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+  .prose-journal a:hover { text-decoration-thickness: 2px; }
+  .prose-journal strong { font-weight: 600; }
+  .prose-journal ul, .prose-journal ol { padding-left: 1.3em; }
+  .prose-journal ul { list-style: none; }
+  .prose-journal ul > li { position: relative; }
+  .prose-journal ul > li::before {
+    content: "—";
+    position: absolute;
+    left: -1.3em;
+    color: var(--muted);
+  }
+  .prose-journal ol { list-style: decimal; }
+  .prose-journal ol > li::marker { font-family: var(--font-mono); font-size: 0.8em; color: var(--muted); }
+  .prose-journal li + li { margin-top: 0.45em; }
+  .prose-journal blockquote {
+    border-left: 2px solid var(--accent);
+    padding-left: 1.25em;
+    font-style: italic;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    color: var(--ink-2);
+  }
+  .prose-journal hr {
+    border: 0;
+    text-align: center;
+    margin-block: 2.5em;
+  }
+  .prose-journal hr::after { content: "⁂"; color: var(--muted); font-size: 1.2rem; }
+  .prose-journal code {
+    font-family: var(--font-mono);
+    font-size: 0.82em;
+    background: var(--paper-2);
+    padding: 0.1em 0.35em;
+  }
+  .prose-journal .table-wrap { overflow-x: auto; margin-block: 2em; }
+  .prose-journal table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--font-sans);
+    font-size: 0.875rem;
+    line-height: 1.4;
+    border-top: 2px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+  }
+  .prose-journal th {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--muted);
+    text-align: left;
+    padding: 0.7em 0.9em 0.7em 0;
+    border-bottom: 1px solid var(--ink);
+    white-space: nowrap;
+  }
+  .prose-journal td {
+    padding: 0.65em 0.9em 0.65em 0;
+    border-bottom: 1px solid var(--rule);
+    font-variant-numeric: tabular-nums;
+  }
+  .prose-journal tr:last-child td { border-bottom: 0; }
+  .prose-journal th[align="right"], .prose-journal td[align="right"] {
+    text-align: right;
+    padding-right: 0;
+    padding-left: 0.9em;
+    font-family: var(--font-mono);
+  }
+  .prose-journal td[align="right"] { font-size: 0.8125rem; }
+  .prose-journal sup a {
+    font-family: var(--font-mono);
+    font-size: 0.7em;
+    text-decoration: none;
+    padding-inline: 0.15em;
+  }
+  .prose-journal .footnotes {
+    margin-top: 3.5em;
+    padding-top: 1.2em;
+    border-top: 1px solid var(--ink);
+    font-family: var(--font-sans);
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: var(--ink-2);
+  }
+  .prose-journal .footnotes h2 {
+    all: unset;
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.9em;
+  }
+  .prose-journal .footnotes ol { padding-left: 1.4em; }
+  .prose-journal .footnotes p { display: inline; }
+
+  /* Drop cap for essays */
+  .dropcap > p:first-of-type::first-letter {
+    float: left;
+    font-size: 4.9em;
+    line-height: 0.82;
+    padding: 0.06em 0.09em 0 0;
+    font-weight: 500;
+    color: var(--accent);
+  }
+}
+
+/* Recharts: quiet focus rings, tabular ticks */
+.recharts-wrapper *:focus { outline: none; }
+.recharts-text { font-family: var(--font-mono); font-size: 11px; fill: var(--muted); }
+
+@media print {
+  .no-print { display: none !important; }
+  body { background: #fff; color: #111; }
+  :root { --paper: #fff; --paper-2: #f3f3f3; --ink: #111; --ink-2: #333; --muted: #555; --rule: #ccc; --accent: #2c5a44; }
+  @page { margin: 16mm 15mm; }
+}

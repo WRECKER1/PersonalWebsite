@@ -1,0 +1,43 @@
+# ─────────────────────────────────────────────────────────────
+# Site-wide settings. Edit this file first.
+# ─────────────────────────────────────────────────────────────
+title: The Investment Journal
+motto: Curiosity, Capital & Conviction      # the "&" is set in italic on the front page
+description: An evolving record of my thoughts, research, and observations on businesses, markets, and the world of finance.
+url: https://example.com                     # your live domain (used for SEO, sitemap, RSS)
+established: "2026"
+
+author:
+  name: Your Name                            # ← replace
+  role: CFA Level III candidate · MBA, IIM Lucknow
+  location: Lucknow, India
+
+# The short "Kept by" panel on the front page
+intro:
+  - label: Now
+    value: First-year MBA student at IIM Lucknow
+  - label: Studying
+    value: CFA Level III candidate
+  - label: Before
+    value: Computer Science and Engineering at UCLA
+  - label: Built
+    value: Founded and operated a business
+  - label: Drawn to
+    value: Investment research, asset and wealth management, capital allocation
+
+email: you@example.com                       # ← replace
+socials:
+  - label: LinkedIn
+    href: https://www.linkedin.com/in/your-handle   # ← replace
+  - label: X / Twitter
+    href: https://x.com/your-handle                 # ← replace or delete
+  - label: GitHub
+    href: https://github.com/your-handle            # ← replace or delete
+
+resumePdf: /resume.pdf                       # file in /public; regenerate with `npm run pdf`
+contactFormEndpoint: ""                      # optional, e.g. https://formspree.io/f/xxxx — blank = opens email app
+
+disclaimer: >-
+  Everything here is a personal learning record and not investment advice. Sample
+  entries use fictional companies and invented figures, and are labelled as such.
+  Always do your own research.

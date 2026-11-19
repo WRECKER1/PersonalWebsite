@@ -1,0 +1,72 @@
+# ─────────────────────────────────────────────────────────────
+# Resume. Bracketed text is a placeholder — replace it.
+# Add, remove or reorder sections and items freely.
+# ─────────────────────────────────────────────────────────────
+summary: >-
+  MBA candidate at IIM Lucknow and CFA Level III candidate with an engineering
+  background and first-hand experience of founding and operating a business.
+  Interested in investment research, asset management and capital allocation.
+
+sections:
+  - heading: Education
+    items:
+      - title: Master of Business Administration
+        org: Indian Institute of Management Lucknow
+        period: "2026 – [Year]"
+        points:
+          - "[Electives, academic standing or scholarships]"
+          - "[Relevant coursework: corporate finance, financial accounting, economics]"
+      - title: B.S., Computer Science and Engineering
+        org: University of California, Los Angeles (UCLA)
+        period: "[Year] – [Year]"
+        points:
+          - "[Honours, GPA or notable coursework]"
+
+  - heading: Professional experience
+    items:
+      - title: "[Role title]"
+        org: "[Company]"
+        location: "[City]"
+        period: "[Month Year] – [Month Year]"
+        points:
+          - "[What you were responsible for, in one line]"
+          - "[A specific outcome, with a number if you have one]"
+
+  - heading: Entrepreneurship
+    items:
+      - title: Founder
+        org: "[Venture name]"
+        location: "[City]"
+        period: "[Year] – [Year]"
+        points:
+          - "[What the business did and who it served]"
+          - "[Scale reached: revenue, customers, team size — only real figures]"
+          - "[What you personally owned: finance, operations, sales, product]"
+
+  - heading: Leadership & extracurricular
+    items:
+      - title: "[Position]"
+        org: "[Club, committee or organisation]"
+        period: "[Year] – [Year]"
+        points:
+          - "[What you led or organised]"
+
+  - heading: Certifications & qualifications
+    items:
+      - title: CFA Program — Level III candidate
+        org: CFA Institute
+        points:
+          - "Passed Level I ([Month Year]) and Level II ([Month Year])"
+      - title: "[Other certification]"
+        org: "[Issuer]"
+        period: "[Year]"
+
+skills:
+  - group: Financial analysis
+    items: [Financial statement analysis, Three-statement modelling, DCF and relative valuation, Unit economics]
+  - group: Research
+    items: [Industry and competitive analysis, Annual report and filing review, Investment write-ups]
+  - group: Technical
+    items: [Python, SQL, Excel, "[Add tools you actually use]"]
+  - group: Languages
+    items: [English, "[Other languages]"]

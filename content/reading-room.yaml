@@ -1,0 +1,130 @@
+# ─────────────────────────────────────────────────────────────
+# The Reading Room. Sample shelf — the statuses and notes below are
+# placeholders. Replace with what you have actually read.
+# Book status: Reading | Read | On the shelf
+# ─────────────────────────────────────────────────────────────
+quotes:
+  - text: Price is what you pay. Value is what you get.
+    by: Warren Buffett
+    source: Berkshire Hathaway shareholder letter, 2008
+  - text: You can't predict. You can prepare.
+    by: Howard Marks
+    source: Oaktree memo, 2001
+  - text: In the short run, the market is a voting machine but in the long run it is a weighing machine.
+    by: Benjamin Graham
+    source: as quoted by Warren Buffett
+  - text: Invert, always invert.
+    by: Carl Jacobi
+    source: a favourite maxim of Charlie Munger
+
+books:
+  - title: The Intelligent Investor
+    author: Benjamin Graham
+    status: Reading
+    theme: Foundations
+    note: "[Your note — what is changing your mind as you read?]"
+  - title: Capital Returns
+    author: Edward Chancellor (ed.)
+    status: Reading
+    theme: Capital cycle
+    note: "[Your note]"
+  - title: Poor Charlie's Almanack
+    author: Charles T. Munger
+    status: Read
+    theme: Mental models
+    note: "[One idea you kept from it]"
+  - title: The Most Important Thing
+    author: Howard Marks
+    status: Read
+    theme: Risk
+    note: "[One idea you kept from it]"
+  - title: The Outsiders
+    author: William N. Thorndike
+    status: Read
+    theme: Capital allocation
+    note: "[One idea you kept from it]"
+  - title: Security Analysis
+    author: Benjamin Graham & David Dodd
+    status: On the shelf
+    theme: Foundations
+  - title: Margin of Safety
+    author: Seth A. Klarman
+    status: On the shelf
+    theme: Risk
+  - title: Financial Shenanigans
+    author: Howard M. Schilit
+    status: On the shelf
+    theme: Accounting
+
+investors:
+  - name: Warren Buffett
+    known_for: Berkshire Hathaway
+    strategy: Buy understandable businesses with durable competitive advantages and able management at sensible prices, then hold them for a very long time.
+  - name: Charlie Munger
+    known_for: Berkshire Hathaway
+    strategy: A latticework of mental models from many disciplines, and a preference for a great business at a fair price over a fair business at a great price.
+  - name: Howard Marks
+    known_for: Oaktree Capital
+    strategy: Second-level thinking, attention to where we stand in the cycle, and the view that risk control matters more than return maximisation.
+  - name: Peter Lynch
+    known_for: Fidelity Magellan Fund
+    strategy: Know what you own and why. Classify companies by type, and let the story be checked against the numbers.
+  - name: Benjamin Graham
+    known_for: Graham-Newman
+    strategy: The margin of safety. Treat a share as part-ownership of a business and Mr. Market as a servant, not a guide.
+  - name: Marathon Asset Management
+    known_for: Capital cycle investing
+    strategy: Watch supply rather than demand. High returns attract capital, and capital destroys returns.
+
+philosophies:
+  - name: Margin of safety
+    summary: Insist on a gap between price and a conservative estimate of value, because the estimate will sometimes be wrong.
+  - name: Circle of competence
+    summary: The size of the circle matters less than knowing where its edge is.
+  - name: The capital cycle
+    summary: Study how much capital is entering an industry. Returns tend to follow supply with a lag.
+  - name: Second-level thinking
+    summary: It is not enough to be right. You must be right about something the consensus has wrong.
+  - name: Inversion
+    summary: Instead of asking how an investment succeeds, ask what would make it fail, and check whether that is already happening.
+
+concepts:
+  - term: Return on invested capital (ROIC)
+    note: What a business earns on the capital it actually employs. Compare it with the cost of that capital.
+  - term: Owner earnings
+    note: Buffett's measure - reported earnings plus non-cash charges, less the capital spending needed to stay in place.
+  - term: Operating leverage
+    note: How much of each additional rupee of revenue falls to profit, and how quickly that reverses.
+  - term: Duration
+    note: The sensitivity of a price to changes in rates. Applies to equities more than it first appears.
+  - term: Base rates
+    note: Before judging this case, ask how often cases like it have worked out.
+  - term: Reinvestment runway
+    note: High returns only compound if there is somewhere to put the next unit of capital.
+
+papers:
+  - title: Capital Asset Prices - A Theory of Market Equilibrium under Conditions of Risk
+    authors: William F. Sharpe
+    year: 1964
+    source: The Journal of Finance
+    why: The origin of the CAPM. Worth reading in the original to see exactly which assumptions it rests on.
+  - title: Theory of the Firm - Managerial Behavior, Agency Costs and Ownership Structure
+    authors: Michael C. Jensen & William H. Meckling
+    year: 1976
+    source: Journal of Financial Economics
+    why: The foundation for thinking about incentives and why management and owners want different things.
+  - title: Prospect Theory - An Analysis of Decision under Risk
+    authors: Daniel Kahneman & Amos Tversky
+    year: 1979
+    source: Econometrica
+    why: Why losses hurt more than gains please, and what that does to investor behaviour.
+  - title: The Cross-Section of Expected Stock Returns
+    authors: Eugene F. Fama & Kenneth R. French
+    year: 1992
+    source: The Journal of Finance
+    why: Size and book-to-market as explanations of returns. The start of the factor conversation.
+  - title: Do Stocks Outperform Treasury Bills?
+    authors: Hendrik Bessembinder
+    year: 2018
+    source: Journal of Financial Economics
+    why: A small minority of stocks account for the market's net wealth creation. A humbling base rate.
