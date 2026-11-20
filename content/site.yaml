@@ -4,7 +4,7 @@
 title: The Investment Journal
 motto: Curiosity, Capital & Conviction      # the "&" is set in italic on the front page
 description: An evolving record of my thoughts, research, and observations on businesses, markets, and the world of finance.
-url: https://example.com                     # your live domain (used for SEO, sitemap, RSS)
+url: https://the-investment-journal.vercel.app   # your live domain (used for SEO, sitemap, RSS)
 established: "2026"
 
 author:
