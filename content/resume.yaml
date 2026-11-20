@@ -45,11 +45,11 @@ sections:
 
   - heading: Leadership & extracurricular
     items:
-      - title: "[Position]"
-        org: "[Club, committee or organisation]"
-        period: "[Year] – [Year]"
+      - title: Member
+        org: Credence Capital, the Investment Club of IIM Lucknow
+        period: Oct 2026 – Present
         points:
-          - "[What you led or organised]"
+          - "[What you work on: e.g. stock pitches, sector coverage, research reports, events]"
 
   - heading: Certifications & qualifications
     items:
